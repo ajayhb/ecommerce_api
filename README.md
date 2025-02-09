@@ -41,5 +41,7 @@ docker run ecommerce-api python manage.py test
 
 🔹 Final Thoughts
 ✔ No manual setup required for reviewers
+
 ✔ Runs entirely inside Docker (DB migrations + API)
+
 ✔ Easy testing with docker run ecommerce-api python manage.py test
