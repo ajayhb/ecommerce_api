@@ -40,6 +40,7 @@ docker run ecommerce-api python manage.py test
 - This project is open-source.
 
 🔹 Final Thoughts
+
 ✔ No manual setup required for reviewers
 
 ✔ Runs entirely inside Docker (DB migrations + API)
