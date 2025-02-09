@@ -18,7 +18,7 @@ A production-ready Django REST framework-based API for managing products and ord
    cd ecommerce_api
    ```
 
-2. 🐳 **Running with Docker**
+2. 🐳 **Running the Docke commandsr**
 ```
 docker build -t ecommerce-api .
 docker run -p 8000:8000 ecommerce-api
