@@ -7,9 +7,10 @@ A production-ready Django REST framework-based API for managing products and ord
 - Place orders with stock validation
 - Exception handling with meaningful error responses
 - PEP8-compliant code
-- Fully dockerized setup
+- Fully dockerized setup (no local installation needed!)
 
-## 🔧 Installation & Setup
+## 🐳 Running with Docker
+> **No need to install Django or dependencies manually! Everything runs inside Docker.**
 
 1. **Clone the repository**
    ```sh
@@ -41,10 +42,10 @@ docker run -p 8000:8000 ecommerce-api
 ```
 
 🛠 **API Endpoints**
-- Method	 Endpoint	 Description
-- GET	    /products/	 Get all products
-- POST	 /products/	 Add a new product
-- POST	 /orders/	 Place an order
+- Method    Endpoint          Description
+- GET       /products/        Get all products
+- POST      /products/        Add a new product
+- POST      /orders/          Place an order
 
 
 **✅ Running Tests**
