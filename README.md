@@ -17,25 +17,8 @@ A production-ready Django REST framework-based API for managing products and ord
    git clone https://github.com/yourusername/ecommerce_api.git
    cd ecommerce_api
    ```
-2. **Create a virtual environment & install dependencies**
-```
-  python -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
-  pip install -r requirements.txt
-```
 
-
-3. **Apply database migrations**
-```
-python manage.py migrate
-```
-
-4. **Run the development server**
-```
-python manage.py runserver
-```
-
-5. 🐳 **Running with Docker**
+2. 🐳 **Running with Docker**
 ```
 docker build -t ecommerce-api .
 docker run -p 8000:8000 ecommerce-api
@@ -50,8 +33,13 @@ docker run -p 8000:8000 ecommerce-api
 
 **✅ Running Tests**
 ```
-python manage.py test
+docker run ecommerce-api python manage.py test
 ```
 
 **📝 License**
 - This project is open-source.
+
+🔹 Final Thoughts
+✔ No manual setup required for reviewers
+✔ Runs entirely inside Docker (DB migrations + API)
+✔ Easy testing with docker run ecommerce-api python manage.py test
