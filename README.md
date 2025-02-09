@@ -21,7 +21,7 @@ A production-ready Django REST framework-based API for managing products and ord
 2. 🐳 **Running the Docke commandsr**
 ```
 docker build -t ecommerce-api .
-docker run -p 8000:8000 ecommerce-api
+docker run -d -p 8000:8000 --name ecommerce-api ecommerce-api
 ```
 
 🛠 **API Endpoints**
@@ -30,6 +30,31 @@ docker run -p 8000:8000 ecommerce-api
 - POST      /products/        Add a new product
 - POST      /orders/          Place an order
 
+
+**Sample API Requests***
+- GET products:  ```curl -X GET http://127.0.0.1:8000/products/ -H "Accept: application/json"```
+- Create a new product: 
+```
+curl -X POST http://127.0.0.1:8000/products/ \
+    -H "Content-Type: application/json" \
+    -d '{
+        "name": "Laptop",
+        "description": "Gaming Laptop with high-end specs",
+        "price": 1200.50,
+        "stock": 10
+    }'
+```
+- POST an order: 
+``` curl -X POST http://127.0.0.1:8000/orders/ \
+    -H "Content-Type: application/json" \
+    -d '{
+        "products": [
+            {"product_id": 3, "quantity": 10}
+        ],
+        "total_price": 2401.00,
+        "status": "pending"
+    }'
+```
 
 **✅ Running Tests**
 ```
